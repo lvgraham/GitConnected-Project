@@ -1,5 +1,5 @@
 body {
-    background-color: #E4DCC7;
+    background-color: #fffde7;
 }
 
 .header{
@@ -8,13 +8,14 @@ body {
 }
 
 .title{
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Paytone One', sans-serif;
     font-size: 50px;
     color: #e8f5e9;
     letter-spacing: 2px;
 }
 
-
-#searchBtn{
-    margin: 10px;
+h4{
+    font-family: 'Paytone One', sans-serif;
+    color: #2A4136;
+    margin-left: 30px;
 }
