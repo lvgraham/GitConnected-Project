@@ -4,8 +4,9 @@ body {
 }
 
 .header{
-    padding: 30px;
+    padding: 100px;
     background-color: #388e3c;
+    background-image: url('images/banner.jpg');
 }
 
 .title{
