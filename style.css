@@ -1,5 +1,25 @@
+
+body {
+    background-color: #fffde7;
+}
+
+.header{
+    padding: 30px;
+    background-color: #388e3c;
+}
+
+.title{
+    font-family: 'Paytone One', sans-serif;
+    font-size: 50px;
+    color: #e8f5e9;
+    letter-spacing: 2px;
+}
+
+h4{
+    font-family: 'Paytone One', sans-serif;
+    color: #2A4136;
+    margin-left: 30px;
+
 #heading {
     background-color:forestgreen;
     color: white;
-
-}
