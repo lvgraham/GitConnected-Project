@@ -4,8 +4,9 @@ body {
 }
 
 .header{
-    padding: 30px;
+    padding: 100px;
     background-color: #388e3c;
+    background-image: url('images/banner.jpg');
 }
 
 .title{
@@ -18,8 +19,5 @@ body {
 h4{
     font-family: 'Paytone One', sans-serif;
     color: #2A4136;
-    margin-left: 30px;
-
-#heading {
-    background-color:forestgreen;
-    color: white;
+    margin-bottom: 30px;
+}
