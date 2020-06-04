@@ -21,3 +21,18 @@ h4{
     color: #2A4136;
     margin-bottom: 30px;
 }
+
+.card-panel{
+    display: inline-block;
+}
+
+#campsiteImage{
+    display: inline-block;
+    width: 25%;
+}
+
+#paragraphText{
+    display: inline-block;
+    width: 75%;
+    padding: 20px;
+}
