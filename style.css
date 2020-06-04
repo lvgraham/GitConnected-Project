@@ -1,14 +1,28 @@
 
+
+
+#heading {
+ 
+    color: white;
+
+}
+
+/*applies to all body*/
 body {
-    background-color: #fffde7;
+    background-color: white;
+
 }
 
+/*applies to header elements*/
 .header{
-    padding: 100px;
-    background-color: #388e3c;
+    width: 100%;
+    background-size: 100%;
+    padding: 5%;
     background-image: url('images/banner.jpg');
+    background-repeat: no-repeat;
 }
 
+/*applies to title of the webiste*/
 .title{
     font-family: 'Paytone One', sans-serif;
     font-size: 50px;
@@ -16,23 +30,137 @@ body {
     letter-spacing: 2px;
 }
 
+/*applies to h4 'Top Campsites'*/
 h4{
     font-family: 'Paytone One', sans-serif;
     color: #2A4136;
     margin-bottom: 30px;
 }
 
+ #campsiteHeader{
+     background-color: #f4d18f ;
+     display: block;
+     line-height: 18px;
+ }
+
+ #csHeadText {
+     color: #2A4136;
+
+
+ }
+
+ li {
+     display: inline;
+ }
+#loadedContent {
+    border: 2px solid black;
+    padding: 50px;
+    margin: auto;
+}
+#logo {
+    padding: auto;
+    margin: 10px;
+}
+
+.menu {
+    display: block;
+    position: relative;
+    cursor: pointer;
+  }
+  .menu-title {
+    display: block;
+    width: $menu_WIDTH;
+    height: 40px;
+    padding: 12px 0 0;
+    background: #9dc852;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s background-color;
+  }
+
+
+  .menu-title:before {
+    content: "";
+    display: block;
+    height: 0;
+    border-top: 5px solid #9dc852;
+    border-left: ($menu_WIDTH / 2) solid 
+  }
+
+.menu-title:hover {
+     background: #8db842; }
+
+.menu-title:hover:before { 
+    border-top-color: #8db842; }
+
+
+#dropdown-menu {
+    padding: 5px;
+    margin: 80px;
+    align-content: center;
+}
+=======
+/*styling for div that camp information will show in*/
 .card-panel{
-    display: inline-block;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
 }
 
 #campsiteImage{
     display: inline-block;
-    width: 25%;
+    width: 21%;
 }
 
 #paragraphText{
     display: inline-block;
-    width: 75%;
-    padding: 20px;
+    width: 70%;
+    padding: 4%;
+    margin-left: 2%;
+}
+
+/*footer styling*/
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #D5AC5A;
+    opacity: 75%;
+    color: white;
+    text-align: center;
+  }
+
+
+/*
+  These rules take effect when the browser's width
+  is either 1200px or less.
+*/
+@media screen and (max-width: 1200px) {
+
+    .card-panel{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #paragraphText{
+        display: inline-block;
+        width: 100%;
+        padding: 2%;
+    }
+        
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .title{
+        font-family: 'Paytone One', sans-serif;
+        font-size: 20px;
+        color: #e8f5e9;
+        letter-spacing: 2px;
+    }
+
 }
