@@ -5,10 +5,11 @@ body {
 
 /*applies to header elements*/
 .header{
-    width: 100vw;
-    padding: 100px;
-    background-color: #388e3c;
+    width: 100%;
+    background-size: 100%;
+    padding: 5%;
     background-image: url('images/banner.jpg');
+    background-repeat: no-repeat;
 }
 
 /*applies to title of the webiste*/
@@ -28,18 +29,21 @@ h4{
 
 /*styling for div that camp information will show in*/
 .card-panel{
-    display: inline-block;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
 }
 
 #campsiteImage{
     display: inline-block;
-    width: 25%;
+    width: 21%;
 }
 
 #paragraphText{
     display: inline-block;
-    width: 75%;
-    padding: 20px;
+    width: 70%;
+    padding: 4%;
+    margin-left: 2%;
 }
 
 /*footer styling*/
@@ -53,3 +57,35 @@ h4{
     color: white;
     text-align: center;
   }
+
+
+/*
+  These rules take effect when the browser's width
+  is either 1200px or less.
+*/
+@media screen and (max-width: 1200px) {
+
+    .card-panel{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #paragraphText{
+        display: inline-block;
+        width: 100%;
+        padding: 2%;
+    }
+        
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .title{
+        font-family: 'Paytone One', sans-serif;
+        font-size: 20px;
+        color: #e8f5e9;
+        letter-spacing: 2px;
+    }
+
+}
