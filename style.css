@@ -28,4 +28,21 @@ h4{
     margin-bottom: 30px;
 }
 
+<<<<<<< HEAD
 
+=======
+.card-panel{
+    display: inline-block;
+}
+
+#campsiteImage{
+    display: inline-block;
+    width: 25%;
+}
+
+#paragraphText{
+    display: inline-block;
+    width: 75%;
+    padding: 20px;
+}
+>>>>>>> 658647561b5c615c68b88f95fd236ee3fccac4e2
