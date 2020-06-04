@@ -1,12 +1,14 @@
-<<<<<<< HEAD
+
+
 #heading {
  
     color: white;
-=======
->>>>>>> d304a19cc75486ada4dad613a092a8475b42827f
+
+}
 
 body {
-    background-color: #fffde7;
+    background-color: white;
+
 }
 
 .header{
@@ -28,21 +30,27 @@ h4{
     margin-bottom: 30px;
 }
 
-<<<<<<< HEAD
+ #campsiteHeader{
+     background-color: #f4d18f ;
+     display: block;
+     line-height: 18px;
+ }
 
-=======
-.card-panel{
-    display: inline-block;
-}
+ #csHeadText {
+     color: #2A4136;
 
-#campsiteImage{
-    display: inline-block;
-    width: 25%;
-}
 
-#paragraphText{
-    display: inline-block;
-    width: 75%;
-    padding: 20px;
+ }
+
+ li {
+     display: inline;
+ }
+#loadedContent {
+    border: 2px solid black;
+    padding: 50px;
+    margin: auto;
 }
->>>>>>> 658647561b5c615c68b88f95fd236ee3fccac4e2
+#logo {
+    padding: auto;
+    margin: 10px;
+}

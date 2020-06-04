@@ -4,14 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campsite Finder Results Page</title>
+       <!-- CSS -->
+       <link rel="stylesheet" href="style.css">
       <!-- Materialize CSS Framework -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      <!-- CSS -->
-      <link rel="stylesheet" href="style.css">
 </head>
 <body>
-       <!-- Dropdown Structure -->
-  
+
+<header>
+       <div class="container-fluid" id="campsiteHeader">
+              <div class="row">
+                     <img src="images/campsite.png" width="200px" class="col" id="logo">
+                     <h1 id="csHeadText" class="col s6">Campsite Finder</h1>
+                     <div class="col s7 push-s10">
+                            <button class='dropdown-trigger btn' href="#!" data-target="dropdown-content">Select a state</button>
+                            <div class="dropdown-content">
+                                   <li><a href="#">Alabama</a></li>
+                                   <li><a href="#">Alaska</a></li>
+                            </div>
+                     </div>
+              </div>
+       </div>
+</header>
+
+
+<div class="container" id="loadedContent">
+       <div class="row">
+              <!-- Add wanted elements of the results -->
+              <div class="campsiteName"></div>
+              <h1>Name of Campsite</h1>
+       </div>
+
+</div>
+
 
 </body>
 </html>
