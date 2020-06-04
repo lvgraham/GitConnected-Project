@@ -1,22 +1,28 @@
 
 
+
 #heading {
  
     color: white;
 
 }
 
+/*applies to all body*/
 body {
     background-color: white;
 
 }
 
+/*applies to header elements*/
 .header{
-    padding: 100px;
-    background-color: #388e3c;
+    width: 100%;
+    background-size: 100%;
+    padding: 5%;
     background-image: url('images/banner.jpg');
+    background-repeat: no-repeat;
 }
 
+/*applies to title of the webiste*/
 .title{
     font-family: 'Paytone One', sans-serif;
     font-size: 50px;
@@ -24,6 +30,7 @@ body {
     letter-spacing: 2px;
 }
 
+/*applies to h4 'Top Campsites'*/
 h4{
     font-family: 'Paytone One', sans-serif;
     color: #2A4136;
@@ -93,4 +100,67 @@ h4{
     padding: 5px;
     margin: 80px;
     align-content: center;
+}
+=======
+/*styling for div that camp information will show in*/
+.card-panel{
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+}
+
+#campsiteImage{
+    display: inline-block;
+    width: 21%;
+}
+
+#paragraphText{
+    display: inline-block;
+    width: 70%;
+    padding: 4%;
+    margin-left: 2%;
+}
+
+/*footer styling*/
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #D5AC5A;
+    opacity: 75%;
+    color: white;
+    text-align: center;
+  }
+
+
+/*
+  These rules take effect when the browser's width
+  is either 1200px or less.
+*/
+@media screen and (max-width: 1200px) {
+
+    .card-panel{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #paragraphText{
+        display: inline-block;
+        width: 100%;
+        padding: 2%;
+    }
+        
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .title{
+        font-family: 'Paytone One', sans-serif;
+        font-size: 20px;
+        color: #e8f5e9;
+        letter-spacing: 2px;
+    }
+
 }
