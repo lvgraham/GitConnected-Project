@@ -18,16 +18,30 @@ toggle between hiding and showing the dropdown content */
 //     }
 //   }
 
+// --------------------------------------------------------------------- PULL STATE INFO FROM API
 
-const queryURL = "https://developer.nps.gov/api/v1/campgrounds?stateCode=" + state + "&api_key=ASQluJvriYYOmYed5QzQRORAQ2y3nC9julgxAIhA"
+// const state = array('AL', 'AK', 'AS', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FM', 'FL', 'GA', 'GU', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MH', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'MP', 'OH', 'OK', 'OR', 'PW', 'PA', 'PR', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VI', 'VA', 'WA', 'WV', 'WI', 'WY', 'AE', 'AA', 'AP');
 
-// const state = TX
+const queryURL = "https://developer.nps.gov/api/v1/campgrounds?stateCode=" + "TX" + "&api_key=ASQluJvriYYOmYed5QzQRORAQ2y3nC9julgxAIhA"
 
-const state = $("#state").val().trim();
+
+// const state = $("#state").val().trim();
 
 $.getJSON(queryURL, function(json) {
-         console.log(json);
+        //  console.log(json);
+         console.log("Total parks in state: ", json.total)
+         console.log(json.data[0].reservationUrl)
+         console.log("Number of sites reservable: ", json.data[0].numberOfSitesReservable)
+         console.log(json.data[0].campsites)
+         console.log(json.data[0].directionsUrl)
+         console.log(json.data[0].fees[0].cost)
+         console.log(json.data[0].name)
+         console.log(json.data[0].description)
 })
+
+// ------------------------------------------------------------------------ APPEND RANDOM PARKS TO HOMEPAGE
+
+// $("#card-panel").append(stateInfo)
 
 
 // $.ajax({
