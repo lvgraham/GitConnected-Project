@@ -1,22 +1,17 @@
+/*applies to all body*/
 body {
     background-color: #fffde7;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
 }
 
-main {
-    flex: 1 0 auto;
-}
-
+/*applies to header elements*/
 .header{
     width: 100vw;
     padding: 100px;
     background-color: #388e3c;
     background-image: url('images/banner.jpg');
-    
 }
 
+/*applies to title of the webiste*/
 .title{
     font-family: 'Paytone One', sans-serif;
     font-size: 50px;
@@ -24,12 +19,14 @@ main {
     letter-spacing: 2px;
 }
 
+/*applies to h4 'Top Campsites'*/
 h4{
     font-family: 'Paytone One', sans-serif;
     color: #2A4136;
     margin-bottom: 30px;
 }
 
+/*styling for div that camp information will show in*/
 .card-panel{
     display: inline-block;
 }
@@ -45,6 +42,7 @@ h4{
     padding: 20px;
 }
 
+/*footer styling*/
 .footer {
     position: fixed;
     left: 0;
