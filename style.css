@@ -67,7 +67,8 @@ h4{
     position: relative;
     cursor: pointer;
   }
-  .menu-title {
+
+.menu-title {
     display: block;
     width: $menu_WIDTH;
     height: 40px;
@@ -78,16 +79,16 @@ h4{
     font-weight: bold;
     text-transform: uppercase;
     transition: 0.3s background-color;
-  }
+}
 
 
-  .menu-title:before {
+.menu-title:before {
     content: "";
     display: block;
     height: 0;
     border-top: 5px solid #9dc852;
     border-left: ($menu_WIDTH / 2) solid 
-  }
+}
 
 .menu-title:hover {
      background: #8db842; }
@@ -101,7 +102,6 @@ h4{
     margin: 80px;
     align-content: center;
 }
-=======
 /*styling for div that camp information will show in*/
 .card-panel{
     display: flex;
