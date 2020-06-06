@@ -10,6 +10,7 @@
 /*applies to all body*/
 body {
     background-color: white;
+    font-family: arial, sans-serif;
 
 }
 
@@ -17,17 +18,24 @@ body {
 .header{
     width: 100%;
     background-size: 100%;
-    padding: 5%;
+    padding: 2%;
     background-image: url('images/banner.jpg');
     background-repeat: no-repeat;
 }
 
 /*applies to title of the webiste*/
+#titleDiv{
+    display: flex;
+    align-items: center;
+    padding: 3%;
+}
+
 .title{
     font-family: 'Paytone One', sans-serif;
     font-size: 50px;
     color: #e8f5e9;
     letter-spacing: 2px;
+    
 }
 
 /*applies to h4 'Top Campsites'*/
@@ -35,28 +43,30 @@ h4{
     font-family: 'Paytone One', sans-serif;
     color: #2A4136;
     margin-bottom: 30px;
+    font-size: 30px;
 }
 
- #campsiteHeader{
+
+#campsiteHeader{
      background-color: #f4d18f ;
      display: block;
      line-height: 18px;
- }
+}
 
- #csHeadText {
+#csHeadText {
      color: #2A4136;
+}
 
-
- }
-
- li {
+li {
      display: inline;
- }
+}
+
 #loadedContent {
     border: 2px solid black;
     padding: 50px;
     margin: auto;
 }
+
 #logo {
     padding: auto;
     margin: 10px;
@@ -66,7 +76,7 @@ h4{
     display: block;
     position: relative;
     cursor: pointer;
-  }
+}
 
 .menu-title {
     display: block;
@@ -78,9 +88,9 @@ h4{
     color: #ffffff;
     font-weight: bold;
     text-transform: uppercase;
-    transition: 0.3s background-color;
+    transition: 0.3s;
+    background-color;
 }
-
 
 .menu-title:before {
     content: "";
@@ -91,17 +101,31 @@ h4{
 }
 
 .menu-title:hover {
-     background: #8db842; }
+     background: #8db842; 
+}
 
 .menu-title:hover:before { 
-    border-top-color: #8db842; }
+    border-top-color: #8db842; 
+}
 
+#dropdownDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 #dropdown-menu {
-    padding: 5px;
-    margin: 80px;
+    margin-top: 10%;
     align-content: center;
+    text-align: center;
+    background-color: #29654D;
 }
+
+#dropdown-menu:hover{
+    background-color: #409976;
+}
+
 /*styling for div that camp information will show in*/
 .card-panel{
     display: flex;
@@ -127,16 +151,17 @@ h4{
     left: 0;
     bottom: 0;
     width: 100%;
+    padding: 15px;
     background-color: #D5AC5A;
     opacity: 75%;
     color: white;
     text-align: center;
-  }
+}
 
+/* MEDIA QUERIES */
 
 /*
-  These rules take effect when the browser's width
-  is either 1200px or less.
+  These rules take effect when the browser's width is either 1200px or less.
 */
 @media screen and (max-width: 1200px) {
 
@@ -153,6 +178,7 @@ h4{
         
 }
 
+/* These rules take into effect when the browser's width is 600 px or less.*/
 
 @media screen and (max-width: 600px) {
 
@@ -161,6 +187,32 @@ h4{
         font-size: 20px;
         color: #e8f5e9;
         letter-spacing: 2px;
+    }
+
+    #dropdown-menu{
+        margin-top: 6%;
+        align-content: center;
+        text-align: center;
+        font-size: 9px;
+    }
+
+}
+
+/* These rules take into effect when the browser's width is 320 px or less.*/
+@media screen and (max-width: 320px){
+
+    .title{
+        font-family: 'Paytone One', sans-serif;
+        font-size: 15px;
+        color: #e8f5e9;
+        letter-spacing: 2px;
+    }
+
+    #dropdown-menu{
+        margin-top: 6%;
+        align-content: center;
+        text-align: center;
+        font-size: 6px;
     }
 
 }
