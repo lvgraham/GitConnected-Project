@@ -7,27 +7,82 @@
 
     <!-- Materialize CSS Framework -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <title>CampsiteFinder</title>
 </head>
 <body>
-<!--task/dropdownmenu-->
-
-    
     
        <!--header-->
     <div class="row header">
-        <div class="grid-example col s8">
+        <div class="col s7" id="titleDiv">
            <span class="flow-text title">CampsiteFinder</span>
-           <div class="input-field col s6">
-            <input placeholder="Placeholder" id="state_input" type="text" class="validate">
-            <label for="state">State</label>
-          </div>
+        </div>
+        <!--dropdown-->
+        <div class="col s5" id="dropdownDiv">
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown1' id="dropdown-menu">Select a state</a>
 
+                 <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="campsitepg2.html" value="AL">Alabama</a></li>
+                <li><a href="campsitepg2.html" value="AK">Alaska</a></li>
+                <li><a href="campsitepg2.html" value="AZ">Arizona</a></li>
+                <li><a href="campsitepg2.html" value="AK">Alaska</a></li>
+                <li><a href="campsitepg2.html" value="AR">Arkansas</a></li>
+                <li><a href="campsitepg2.html" value="CAK">California</a></li>
+                <li><a href="campsitepg2.html" value="CO">Colorado</a></li>
+                <li><a href="campsitepg2.html" value="CT">Connecticut</a></li>
+                <li><a href="campsitepg2.html" value="DE">Delaware</a></li>
+                <li><a href="campsitepg2.html" value="FL">Flordia</a></li>
+                <li><a href="campsitepg2.html" value="GA">Georgia</a></li>
+                <li><a href="campsitepg2.html" value="HI">Hawaii</a></li>
+                <li><a href="campsitepg2.html" value="ID">Idaho</a></li>
+                <li><a href="campsitepg2.html" value="IL">Illinois</a></li>
+                <li><a href="campsitepg2.html" value="IN">Indiana</a></li>
+                <li><a href="campsitepg2.html" value="IA">Iowa</a></li>
+                <li><a href="campsitepg2.html" value="KS">Kansas</a></li>
+                <li><a href="campsitepg2.html" value="KY">Kentucky</a></li>
+                <li><a href="campsitepg2.html" value="LA">Louisiana</a></li>
+                <li><a href="campsitepg2.html" value="ME">Maine</a></li>
+                <li><a href="campsitepg2.html" value="MD">Maryland</a></li>
+                <li><a href="campsitepg2.html" value="MA">Massachusetts</a></li>
+                <li><a href="campsitepg2.html" value="MI">Michigan</a></li>
+                <li><a href="campsitepg2.html" value="MN">Minnesota</a></li>
+                <li><a href="campsitepg2.html" value="MS">Mississippi</a></li>
+                <li><a href="campsitepg2.html" value="MO">Missouri</a></li>
+                <li><a href="campsitepg2.html" value="MT">Montana</a></li>
+                <li><a href="campsitepg2.html" value="NE">Nebraska</a></li>
+                <li><a href="campsitepg2.html" value="NV">Nevada</a></li>
+                <li><a href="campsitepg2.html" value="NH">New Hampshire</a></li>
+                <li><a href="campsitepg2.html" value="NJ">New Jersey</a></li>
+                <li><a href="campsitepg2.html" value="NM">New Mexico</a></li>
+                <li><a href="campsitepg2.html" value="NY">New York</a></li>
+                <li><a href="campsitepg2.html" value="NC">North Carolina</a></li>
+                <li><a href="campsitepg2.html" value="ND">North Dakota</a></li>
+                <li><a href="campsitepg2.html" value="OH">Ohio</a></li>
+                <li><a href="campsitepg2.html" value="OK">Oklahoma</a></li>
+                <li><a href="campsitepg2.html" value="OR">Oregon</a></li>
+                <li><a href="campsitepg2.html" value="PA">Pennsylavania</a></li>
+                <li><a href="campsitepg2.html" value="RI">Rhode Island</a></li>
+                <li><a href="campsitepg2.html" value="SC">South Carolina</a></li>
+                <li><a href="campsitepg2.html" value="Sd">South Dakota</a></li>
+                <li><a href="campsitepg2.html" value="TN">Tennessee</a></li>
+                <li><a href="campsitepg2.html" value="TX">Texas</a></li>
+                <li><a href="campsitepg2.html" value="UT">Utah</a></li>
+                <li><a href="campsitepg2.html" value="VT">Vermont</a></li>
+                <li><a href="campsitepg2.html" value="VA">Virgina</a></li>
+                <li><a href="campsitepg2.html" value="WA">Washington</a></li>
+                <li><a href="campsitepg2.html" value="WV">West Virgina</a></li>
+                <li><a href="campsitepg2.html" value="WI">Wisconstin</a></li>
+                <li><a href="campsitepg2.html" value="WY">Wyoming</a></li>    
+            </ul>
         </div>
     </div>
 
+    <!--main content div-->
     <div class="container">
         <div class="row">
             <div class="col s12">
@@ -58,5 +113,14 @@
     <!--link to materialize JS-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type ="text/javascript" src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.dropdown-trigger');
+          var instances = M.Dropdown.init(elems, {});
+        });
+      
+    </script>
 </body>
 </html>
