@@ -1,14 +1,14 @@
 
 $(document).ready(function() { 
-    $("<div class = 'totalParks'>Total National Parks in State: </div>").appendTo(".container"); 
-    $("<div class = 'reserveSites'>Number of Reservable Sites: </div>").appendTo(".container"); 
-    $("<div class = 'totalSites'>Number of Total Sites: </div>").appendTo(".container"); 
-    $("<div class = 'tentSites'>Number of Tent Sites: </div>").appendTo(".container"); 
-    $("<div class = 'rvSites'>Number of RV Sites: </div>").appendTo(".container"); 
-    $("<div class = 'reserveURL'>Reservation URL: </div>").appendTo(".container"); 
-    $("<div class = 'cost'>Cost: </div>").appendTo(".container"); 
-    $("<div class = 'parkName'>Park Name: </div>").appendTo(".container"); 
-    $("<div class = 'stateCode'>State Code: </div>").appendTo(".container"); 
+    $("<div class = 'totalParks '>Total National Parks in State: </div>").appendTo(".container"); 
+    $("<div class = 'reserveSites '>Number of Reservable Sites: </div>").appendTo(".container"); 
+    $("<div class = 'totalSites '>Number of Total Sites: </div>").appendTo(".container"); 
+    // $("<div class = 'tentSites '>Number of Tent Sites: </div>").appendTo(".container"); 
+    // $("<div class = 'rvSites '>Number of RV Sites: </div>").appendTo(".container"); 
+    $("<div class = 'reserveURL '>Reservation URL: </div>").appendTo(".container"); 
+    $("<div class = 'cost '>Cost: </div>").appendTo(".container"); 
+    $("<div class = 'parkName '>Park Name: </div>").appendTo(".container"); 
+    $("<div class = 'stateCode '>State Code: </div>").appendTo(".container"); 
 
 }); 
 
@@ -43,11 +43,11 @@ $("#dropdown1 li").on("click", function(e) {
     let totalSites = document.querySelector(".container .totalSites");
     totalSites.textContent = ("Number of Total Sites: " + response.data[0].campsites.totalsites)
     
-    let tentSites = document.querySelector(".container .tentSites");
-    tentSites.textContent = ("Number of Tent Only: " + response.data[0].campsites.tentonly)
+    // let tentSites = document.querySelector(".container .tentSites");
+    // tentSites.textContent = ("Number of Tent Only: " + response.data[0].campsites.tentonly)
     
-    let rvSites = document.querySelector(".container .rvSites");
-    rvSites.textContent = ("Number of RV Only: " + response.data[0].campsites.rvonly)
+    // let rvSites = document.querySelector(".container .rvSites");
+    // rvSites.textContent = ("Number of RV Only: " + response.data[0].campsites.rvonly)
   
     let reserveURL = document.querySelector(".container .reserveURL");
     reserveURL.textContent = ("Reservation URL: " + response.data[0].reservationUrl)  
