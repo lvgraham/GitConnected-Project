@@ -1,19 +1,12 @@
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 010452aba99cedf454f40a8c8d92c78d2bc848c9
 #heading {
  
     color: white;
 
 }
 
-<<<<<<< HEAD
-=======
 /*applies to all body*/
->>>>>>> 010452aba99cedf454f40a8c8d92c78d2bc848c9
 body {
     background-color: white;
     font-family: arial, sans-serif;
@@ -62,19 +55,6 @@ h4{
 #csHeadText {
      color: #2A4136;
 }
-
-
- }
- /* Footer Logo*/
-
- .footerLogo { 
-     color: black;
-     text-align: center;
-
- }
-
-
-
 
  li {
      display: inline;
@@ -171,11 +151,13 @@ h4{
     bottom: 0;
     width: 100%;
     padding: 15px;
-    background-color: #D5AC5A;
+    background-color: #29654D;
     opacity: 75%;
     color: white;
     text-align: center;
 }
+
+
 
 /* MEDIA QUERIES */
 
