@@ -1,120 +1,76 @@
-// set API and URL 
-const api = {
-    key: "ASQluJvriYYOmYed5QzQRORAQ2y3nC9julgxAIhA",
-    baseurl: "https://developer.nps.gov/api/v1/"
-}
 
-// State Input
-const stateSelect = document.querySelector("#state_input")
-stateSelect.addEventListener(
-    "keypress",
-    setQuery
-)
+$(document).ready(function() { 
+    $("<div class = 'totalParks'>Total National Parks in State: </div>").appendTo(".container"); 
+    $("<div class = 'reserveSites'>Number of Reservable Sites: </div>").appendTo(".container"); 
+    $("<div class = 'totalSites'>Number of Total Sites: </div>").appendTo(".container"); 
+    $("<div class = 'tentSites'>Number of Tent Sites: </div>").appendTo(".container"); 
+    $("<div class = 'rvSites'>Number of RV Sites: </div>").appendTo(".container"); 
+    $("<div class = 'reserveURL'>Reservation URL: </div>").appendTo(".container"); 
+    $("<div class = 'cost'>Cost: </div>").appendTo(".container"); 
+    $("<div class = 'parkName'>Park Name: </div>").appendTo(".container"); 
+    $("<div class = 'stateCode'>State Code: </div>").appendTo(".container"); 
 
-function setQuery(evt) {
-    if (evt.keycode == 13) {
-        getresults(stateSelect.value)
-        // console.log(stateSelect.value)
-    }
-}
+}); 
 
-// API Results
-function getresults(query) {
-    fetch(`${api.baseurl}campgrounds?stateCode=${query}&api_key=${api.key}`)
-    .then((state) => {
-        return state.json()
-    })
-    .then(displayResults)
-}
+$("#dropdown1 li").on("click", function(e) {
+    
+    e.preventDefault();
+    
+    let state = $(this).find("a").attr("value");
+    // console.log(state);
 
+    const APIKey = "ASQluJvriYYOmYed5QzQRORAQ2y3nC9julgxAIhA"
 
+    const queryURL = "https://developer.nps.gov/api/v1/campgrounds?stateCode=" + state + "&api_key=" + APIKey
 
+    $.ajax({
+        type: 'GET',
+        url: queryURL,
+        dataType: 'json',
 
+    }).then (function(response) {
+        // console.log(response)
 
-// ------------------------------------------ Pull down menu
+    let totalparks = document.querySelector(".container .totalParks");
+    totalparks.textContent = ("Total National Parks in State: " + response.total);
 
-/* When the user clicks on the button, (drop down button)
-toggle between hiding and showing the dropdown content */
-// function myFunction() {
-//     document.getElementById("#state_input").classList.toggle("show");
-//   }
+    let stateCode = document.querySelector(".container .stateCode");
+    stateCode.textContent = ("State Code: " + response.data[0].addresses[0].stateCode)
+    
+    let reserveSites = document.querySelector(".container .reserveSites");
+    reserveSites.textContent = ("Number of Reservable Site: " + response.data[0].numberOfSitesReservable)
   
-//   // Close the dropdown menu if the user clicks outside of it
-//   window.onclick = function(event) {
-//     if (!event.target.matches('.dropbtn')) {
-//       var dropdowns = document.getElementsByClassName("dropdown-content");
-//       var i;
-//       for (i = 0; i < dropdowns.length; i++) {
-//         var openDropdown = dropdowns[i];
-//         if (openDropdown.classList.contains('show')) {
-//           openDropdown.classList.remove('show');
-//         }
-//       }
-//     }
-//   }
+    let totalSites = document.querySelector(".container .totalSites");
+    totalSites.textContent = ("Number of Total Sites: " + response.data[0].campsites.totalsites)
+    
+    let tentSites = document.querySelector(".container .tentSites");
+    tentSites.textContent = ("Number of Tent Only: " + response.data[0].campsites.tentonly)
+    
+    let rvSites = document.querySelector(".container .rvSites");
+    rvSites.textContent = ("Number of RV Only: " + response.data[0].campsites.rvonly)
+  
+    let reserveURL = document.querySelector(".container .reserveURL");
+    reserveURL.textContent = ("Reservation URL: " + response.data[0].reservationUrl)  
 
-// Initializing the jQuery way
-// $(".simple-dropdown").dropdown(
-//     {
-//         'closeOnClick': true,
-//         'hover': true,
-//     });
+    let cost = document.querySelector(".container .cost");
+    cost.textContent = ("Cost: " + response.data[0].fees[0].cost) 
+    
+    let parkName = document.querySelector(".container .parkName");
+    parkName.textContent = ("Park Name: " + response.data[0].operatingHours[0].name) 
 
 
-// --------------------------------------------------------------------- PULL STATE INFO FROM API
-
-// const state = array('AL', 'AK', 'AS', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FM', 'FL', 'GA', 'GU', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MH', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'MP', 'OH', 'OK', 'OR', 'PW', 'PA', 'PR', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VI', 'VA', 'WA', 'WV', 'WI', 'WY', 'AE', 'AA', 'AP');
-
-// const state = $("#state").val();
-
-const queryURL = "https://developer.nps.gov/api/v1/campgrounds?stateCode=" + "TX" + "&api_key=ASQluJvriYYOmYed5QzQRORAQ2y3nC9julgxAIhA"
-
-
-$.getJSON(queryURL, function(json) {
-        //  console.log(json);
-         console.log("Total parks in state: ", json.total)
-         console.log("Reservation URL: ", json.data[0].reservationUrl)
-         console.log("Number of sites reservable: ", json.data[0].numberOfSitesReservable)
-         console.log("Total Sites: ", json.data[0].campsites)
-        //  console.log(json.data[0].directionsUrl)
-         console.log("Cost: ", json.data[0].fees[0].cost)
-         console.log("Park Name: ", json.data[0].name)
-         console.log("Latitude: ", json.data[0].latitude)
-         console.log("Longitude: ", json.data[0].longitude)
-         console.log("Park ID: ", json.data[0].id)
-         console.log("Postal Code: ", json.data[4].addresses[0].postalCode)
-})
-
-// ------------------------------------------------------------------------ APPEND RANDOM PARKS TO HOMEPAGE
-
-// $("#card-panel").append(stateInfo)
+    console.log("Latitude: ", response.data[0].latitude)
+    console.log("Longitude: ", response.data[0].longitude)
+    console.log("Park ID: ", response.data[0].id)
+    console.log("Postal Code: ", response.data[4].addresses[0].postalCode)
+  
+    })
+    
+});
 
 
-// $.ajax({
-//     url: queryURL,
-//     dataType: 'jsonp',
-//     success: function(results){
-//         var title = results.response.oneforty;
-//         var numTweets = results.response.trackback_total;
-//         $('#results').append(title + ' has ' + numTweets + ' tweets.');
-//     }
-// });
 
 
-// let state = "TX";
-// let longitude;
-// let latitude; 
-// let APIKey = "ASQluJvriYYOmYed5QzQRORAQ2y3nC9julgxAIhA";
-// let queryURL = "https://developer.nps.gov/api/v1/campgrounds?stateCode="+state+"&api_key="+APIKey;
-// git$("button").on("click", function() {
-//     state = $(this).attr("Search");
 
-// $.ajax({
-//     url: queryURL,
-//     method: "GET"
-//   }).then(campgroundsReturned);
 
-// function campgroundsReturned(data) {
-//     console.log(data);  
-// };
-// })
+
