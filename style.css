@@ -52,65 +52,18 @@ h4{
  #csHeadText {
      color: #2A4136;
 
-<<<<<<< HEAD
+
+ }
+ /* Footer Logo*/
+
+ .footerLogo { 
+     color: black;
+     text-align: center;
 
  }
 
- li {
-     display: inline;
- }
-#loadedContent {
-    border: 2px solid black;
-    padding: 50px;
-    margin: auto;
-}
-#logo {
-    padding: auto;
-    margin: 10px;
-}
-
-.menu {
-    display: block;
-    position: relative;
-    cursor: pointer;
-  }
-  .menu-title {
-    display: block;
-    width: $menu_WIDTH;
-    height: 40px;
-    padding: 12px 0 0;
-    background: #9dc852;
-    text-align: center;
-    color: #ffffff;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: 0.3s background-color;
-  }
 
 
-  .menu-title:before {
-    content: "";
-    display: block;
-    height: 0;
-    border-top: 5px solid #9dc852;
-    border-left: ($menu_WIDTH / 2) solid 
-  }
-
-.menu-title:hover {
-     background: #8db842; }
-
-.menu-title:hover:before { 
-    border-top-color: #8db842; }
-
-
-#dropdown-menu {
-    padding: 5px;
-    margin: 80px;
-    align-content: center;
-}
-=======
-
- }
 
  li {
      display: inline;
@@ -227,4 +180,3 @@ h4{
     }
 
 }
->>>>>>> 010452aba99cedf454f40a8c8d92c78d2bc848c9
