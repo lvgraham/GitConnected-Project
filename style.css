@@ -115,12 +115,12 @@ h4{
     align-self: center;
 }
 
-#campsiteImage{
+.img{
     display: inline-block;
     width: 21%;
 }
 
-#paragraphText{
+.campInfo{
     display: inline-block;
     width: 70%;
     padding: 4%;
@@ -143,13 +143,6 @@ h4{
 
 //* State Dropdown Bar*//
 
-/* #dropdownDiv{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-} */
-
 #dropdownDiv {
     color: white;
     background-color: black;
@@ -157,15 +150,16 @@ h4{
 .selectedState { 
     color: white;
     background-color: #29654D
-   
 }
 .dropdown-content .selectedState:hover {
     color: black;
     background-color: #f4d18f;
 }
-/* .dropdown-content {
 
-} */
+.hide {
+    display: none;
+}
+
 
 /* MEDIA QUERIES */
 
