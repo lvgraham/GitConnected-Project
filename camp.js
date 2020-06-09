@@ -12,11 +12,14 @@ $(document).ready(function() {
 
 }); 
 
-$("#dropdown1 li").on("click", function(e) {
+// $("#dropdown1 li").on("click", function(e) {
+    $(document).ready(function() {
+    // e.preventDefault();
     
-    e.preventDefault();
-    
-    let state = $(this).find("a").attr("value");
+    const urlParams = new URLSearchParams(window.location.search);
+    const state = urlParams.get('state');
+
+    // let state = 'TX';//$(this).find("a").attr("value"); getParams('state');
     // console.log(state);
 
     const APIKey = "ASQluJvriYYOmYed5QzQRORAQ2y3nC9julgxAIhA"
