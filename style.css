@@ -133,12 +133,12 @@ li {
     align-self: center;
 }
 
-#campsiteImage{
+.img{
     display: inline-block;
     width: 21%;
 }
 
-#paragraphText{
+.campInfo{
     display: inline-block;
     width: 70%;
     padding: 4%;
@@ -151,11 +151,14 @@ li {
     left: 0;
     bottom: 0;
     width: 100%;
-    padding: 15px;
     background-color: #D5AC5A;
     opacity: 75%;
     color: white;
     text-align: center;
+}
+
+.hide {
+    display: none;
 }
 
 /* MEDIA QUERIES */
