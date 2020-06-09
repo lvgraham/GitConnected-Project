@@ -1,6 +1,5 @@
 
 
-
 #heading {
  
     color: white;
@@ -57,7 +56,7 @@ h4{
      color: #2A4136;
 }
 
-li {
+ li {
      display: inline;
 }
 
@@ -108,23 +107,6 @@ li {
     border-top-color: #8db842; 
 }
 
-#dropdownDiv{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#dropdown-menu {
-    margin-top: 10%;
-    align-content: center;
-    text-align: center;
-    background-color: #29654D;
-}
-
-#dropdown-menu:hover{
-    background-color: #409976;
-}
 
 /*styling for div that camp information will show in*/
 .card-panel{
@@ -133,12 +115,12 @@ li {
     align-self: center;
 }
 
-#campsiteImage{
+.img{
     display: inline-block;
     width: 21%;
 }
 
-#paragraphText{
+.campInfo{
     display: inline-block;
     width: 70%;
     padding: 4%;
@@ -151,12 +133,33 @@ li {
     left: 0;
     bottom: 0;
     width: 100%;
-    padding: 15px;
-    background-color: #D5AC5A;
+    padding: 0px;
+    margin: -5px;
+    background-color: #29654D;
     opacity: 75%;
     color: white;
     text-align: center;
 }
+
+//* State Dropdown Bar*//
+
+#dropdownDiv {
+    color: white;
+    background-color: black;
+}
+.selectedState { 
+    color: white;
+    background-color: #29654D
+}
+.dropdown-content .selectedState:hover {
+    color: black;
+    background-color: #f4d18f;
+}
+
+.hide {
+    display: none;
+}
+
 
 /* MEDIA QUERIES */
 
