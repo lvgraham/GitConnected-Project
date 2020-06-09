@@ -1,11 +1,4 @@
 
-
-#heading {
- 
-    color: white;
-
-}
-
 /*applies to all body*/
 body {
     background-color: white;
@@ -46,58 +39,6 @@ h4{
     font-size: 30px;
 }
 
- li {
-     display: inline;
-}
-
-#loadedContent {
-    border: 2px solid black;
-    padding: 50px;
-    margin: auto;
-}
-
-#logo {
-    padding: auto;
-    margin: 10px;
-}
-
-.menu {
-    display: block;
-    position: relative;
-    cursor: pointer;
-}
-
-.menu-title {
-    display: block;
-    width: $menu_WIDTH;
-    height: 40px;
-    padding: 12px 0 0;
-    background: #9dc852;
-    text-align: center;
-    color: #ffffff;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: 0.3s;
-    background-color;
-}
-
-.menu-title:before {
-    content: "";
-    display: block;
-    height: 0;
-    border-top: 5px solid #9dc852;
-    border-left: ($menu_WIDTH / 2) solid 
-}
-
-.menu-title:hover {
-     background: #8db842; 
-}
-
-.menu-title:hover:before { 
-    border-top-color: #8db842; 
-}
-
-
 /*styling for div that camp information will show in*/
 .card-panel{
     display: flex;
@@ -117,8 +58,19 @@ h4{
     margin-left: 2%;
 }
 
+/*div that park info will show in in campsitepg2.html*/
+
+#loadedContent {
+    border: 2px solid black;
+    padding: 50px;
+    margin: auto;
+}
 
 /* State Dropdown Bar*/
+
+li {
+    display: inline;
+}
 
 #dropdownDiv {
     display: flex;
@@ -129,7 +81,10 @@ h4{
 
 #dropdown-menu{
     background-color: #29654D;  
-    
+}
+
+#dropdown-menu:hover{
+    background-color: #3E9F78;  
 }
 
 .dropdown-content .selectedState { 
@@ -140,7 +95,6 @@ h4{
     color: black;
     background-color: #f4d18f;
 }
-
 
 /*hide class*/
 .hide {
