@@ -10,6 +10,8 @@
        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <!-- Materialize CSS Framework -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <!--link to google fonts-->
+       <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
       <!--link to js sheet-->
     <script defer src="camp.js"></script>
     <script defer src="weather.js"></script>
@@ -22,7 +24,7 @@
        <!--header-->
        <div class="row header">
               <div class="col s7" id="titleDiv">
-                     <span class="flow-text title">CampsiteFinder</span>
+                     <span class="flow-text title"><a href="index.html" class="title">CampsiteFinder</a></span>
               </div>
               <!--dropdown-->
               <div class="col s5" id="dropdownDiv">
@@ -30,7 +32,6 @@
 
                      <!-- Dropdown Structure -->
                      <ul id='dropdown1' class='dropdown-content'>
-                       
                             <li><a href="campsitepg2.html?state=AL" class="selectedState" value="AL">Alabama</a></li>
                             <li><a href="campsitepg2.html?state=AK" class="selectedState" value="AK">Alaska</a></li>
                             <li><a href="campsitepg2.html?state=AZ" class="selectedState" value="AZ">Arizona</a></li>
@@ -90,7 +91,6 @@
                      <!-- Add wanted elements of the results -->
                      <div class="campsiteName"></div>
                      <h1>Name of Campsite</h1>
-
               </div>
 
        </div>
