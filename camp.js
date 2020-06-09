@@ -30,7 +30,7 @@ $("#dropdown1 li").on("click", function(e) {
 
     }).then (function(response) {
         // console.log(response)
-
+    
     let totalparks = document.querySelector(".container .totalParks");
     totalparks.textContent = ("Total National Parks in State: " + response.total);
 
