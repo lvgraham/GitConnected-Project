@@ -159,7 +159,7 @@ h4{
     background-color: #29654D
    
 }
-.dropdown-content #selectedState:hover {
+.dropdown-content .selectedState:hover {
     color: black;
     background-color: #f4d18f;
 }
