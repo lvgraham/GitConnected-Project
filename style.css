@@ -156,11 +156,37 @@ h4{
     width: 100%;
     padding: 0px;
     margin: -5px;
-    background-color:  #29654D;
+    background-color: #29654D;
     opacity: 75%;
     color: white;
     text-align: center;
 }
+
+//* State Dropdown Bar*//
+
+/* #dropdownDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} */
+
+#dropdownDiv {
+    color: white;
+    background-color: black;
+}
+.selectedState { 
+    color: white;
+    background-color: #29654D
+   
+}
+.dropdown-content .selectedState:hover {
+    color: black;
+    background-color: #f4d18f;
+}
+/* .dropdown-content {
+
+} */
 
 /* MEDIA QUERIES */
 
