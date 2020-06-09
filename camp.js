@@ -56,16 +56,25 @@ $("#dropdown1 li").on("click", function(e) {
     cost.textContent = ("Cost: " + response.data[0].fees[0].cost) 
     
     let parkName = document.querySelector(".container .parkName");
-    parkName.textContent = ("Park Name: " + response.data[0].operatingHours[0].name) 
+    parkName.textContent = ("Park Name: " + response.data[0].operatingHours[0].name)
+    
+    let stateArr = response.data
+    while(stateArr.length) {
+        // console.log(a.splice(0,5));
+    }
 
 
-    console.log("Latitude: ", response.data[0].latitude)
-    console.log("Longitude: ", response.data[0].longitude)
-    console.log("Park ID: ", response.data[0].id)
-    console.log("Postal Code: ", response.data[4].addresses[0].postalCode)
+    // console.log("Latitude: ", response.data[0].latitude)
+    // console.log("Longitude: ", response.data[0].longitude)
+    // console.log("Park ID: ", response.data[0].id)
+    // console.log("Postal Code: ", response.data[0].addresses[0].postalCode)
   
     })
     
+    // startBtn.classList.add("hide")
+    // startBtn.classList.remove("hide");
+
+
 });
 
 
