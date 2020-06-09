@@ -33,7 +33,7 @@ $(document).ready(function() {
 
     }).then (function(response) {
         // console.log(response)
-
+    
     let totalparks = document.querySelector(".container .totalParks");
     totalparks.textContent = ("Total National Parks in State: " + response.total);
 
