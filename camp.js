@@ -12,11 +12,14 @@ $(document).ready(function() {
 
 }); 
 
-$("#dropdown1 li").on("click", function(e) {
+// $("#dropdown1 li").on("click", function(e) {
+    $(document).ready(function() {
+    // e.preventDefault();
     
-    e.preventDefault();
-    
-    let state = $(this).find("a").attr("value");
+    const urlParams = new URLSearchParams(window.location.search);
+    const state = urlParams.get('state');
+
+    // let state = 'TX';//$(this).find("a").attr("value"); getParams('state');
     // console.log(state);
 
     const APIKey = "ASQluJvriYYOmYed5QzQRORAQ2y3nC9julgxAIhA"
@@ -30,7 +33,7 @@ $("#dropdown1 li").on("click", function(e) {
 
     }).then (function(response) {
         // console.log(response)
-
+    
     let totalparks = document.querySelector(".container .totalParks");
     totalparks.textContent = ("Total National Parks in State: " + response.total);
 
@@ -75,7 +78,16 @@ $("#dropdown1 li").on("click", function(e) {
     // startBtn.classList.remove("hide");
 
 
-});
+    parkName.textContent = ("Park Name: " + response.data[0].operatingHours[0].name) 
+
+
+    console.log("Latitude: ", response.data[0].latitude)
+    console.log("Longitude: ", response.data[0].longitude)
+    console.log("Park ID: ", response.data[0].id)
+    console.log("Postal Code: ", response.data[4].addresses[0].postalCode)
+  
+    })
+
 
 
 
