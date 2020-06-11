@@ -1,15 +1,13 @@
 
 $(document).ready(function() { 
-    $("<div class = 'totalParks '>Total National Parks in State: </div>").appendTo(".container"); 
+    $("<div class = 'parkName '>Park Name: </div>").appendTo(".container");
+    $("<div class = 'totalSites '>Number of Total Sites: </div>").appendTo(".container");
     $("<div class = 'reserveSites '>Number of Reservable Sites: </div>").appendTo(".container"); 
-    $("<div class = 'totalSites '>Number of Total Sites: </div>").appendTo(".container"); 
     $("<div class = 'reserveURL '>Reservation URL: </div>").appendTo(".container"); 
-    $("<div class = 'cost '>Cost: </div>").appendTo(".container"); 
-    $("<div class = 'parkName '>Park Name: </div>").appendTo(".container"); 
-    $("<div class = 'stateCode '>State Code: </div>").appendTo(".container"); 
+    $("<div class = 'cost '>Cost: </div>").appendTo(".container");
+    // $("<div class = 'stateCode '>State Code: </div>").appendTo(".container"); 
     $("<div class = 'description '>Description: </div>").appendTo(".container");
-    // $("<ul class = 'parks '>Parks: </ul>").appendTo(".campsiteName");
-
+    // $("<div class = 'totalParks '>Total Nat. Park Campgrounds: </div>").appendTo(".container"); 
 }); 
 
 // $("#dropdown1 li").on("click", function(e) {
@@ -34,11 +32,11 @@ $(document).ready(function() {
         }).then (function(response) {
             // console.log(response)
     
-        let totalparks = document.querySelector(".container .totalParks");
-        totalparks.textContent = ("Total Campgrounds in State: " + response.total);
+        // let totalparks = document.querySelector(".container .totalParks");
+        // totalparks.textContent = ("Total Campgrounds in State: " + response.total);
     
-        let stateCode = document.querySelector(".container .stateCode");
-        stateCode.textContent = ("State Code: " + response.data[0].addresses[0].stateCode)
+        // let stateCode = document.querySelector(".container .stateCode");
+        // stateCode.textContent = ("State Code: " + response.data[0].addresses[0].stateCode)
         
         let reserveSites = document.querySelector(".container .reserveSites");
         reserveSites.textContent = ("Number of Reservable Site: " + response.data[0].numberOfSitesReservable)
@@ -61,23 +59,7 @@ $(document).ready(function() {
         let parks = document.querySelector(".container .park")
         parks.textContent = ("Parks: " + response.data[0].description)
         
-        
-        // $.each(state, function(key, value) {
-        //     var parkName = value.name;
-        //     // var tuningArray = value.tuning;
-        //     console.log('name: ' + tuningName);
-        //     $.each(tuningArray, function(key,value) {
-        //       console.log(value);
-        //     });
-        //   });
     
-        // for (let i = 0; i < response.data.length; i++) {
-        //     let masterArr = response.data[i].name;
-        //     console.log(masterArr)
-        //     let parkNameList = document.querySelector(".container .parks")
-        //     parkNameList.textContent = masterArr
-    
-        // }
     
         // console.log("Latitude: ", response.data[0].latitude)
         // console.log("Longitude: ", response.data[0].longitude)
