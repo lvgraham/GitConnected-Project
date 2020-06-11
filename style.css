@@ -3,7 +3,7 @@
 body {
     background-color: white;
     font-family: arial, sans-serif;
-
+    padding-bottom: 18%;
 }
 
 /*applies to header elements*/
@@ -49,6 +49,11 @@ h4{
 .img{
     display: inline-block;
     width: 21%;
+}
+
+img{
+    max-width: 50%;
+    height: auto;
 }
 
 .campInfo{
