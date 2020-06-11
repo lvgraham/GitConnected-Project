@@ -33,6 +33,18 @@ $(document).ready(function() {
 
     }).then (function(response) {
         // console.log(response)
+        for (let i = 0; i < response.data.length ; i++){
+            console.log(response.data.length);
+            console.log(i);
+            let campInfoElem = $("<div>");
+            let campImage = $("<img>");
+            campImage.attr("src", response.data[i].images[0].url);            
+            let campsiteName = response.data[i].name;
+            console.log(campsiteName);
+            $(campInfoElem.append(campImage));
+            $(campInfoElem.append(campsiteName));
+            $('#campsiteInfo').append(campInfoElem);
+            }
     
     let totalparks = document.querySelector(".container .totalParks");
     totalparks.textContent = ("Total National Parks in State: " + response.total);
