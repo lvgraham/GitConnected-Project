@@ -3,7 +3,7 @@
 body {
     background-color: white;
     font-family: arial, sans-serif;
-
+    padding-bottom: 18%;
 }
 
 /*applies to header elements*/
@@ -51,6 +51,11 @@ h4{
     width: 21%;
 }
 
+img{
+    max-width: 50%;
+    height: auto;
+}
+
 .campInfo{
     display: inline-block;
     width: 70%;
@@ -88,6 +93,12 @@ li {
 
 #dropdown-menu:hover{
     background-color: #3E9F78;  
+}
+
+.selectedState { 
+    color: white;
+    background-color: #29654D;
+    opacity: 85%;
 }
 
 .dropdown-content .selectedState { 
@@ -142,12 +153,11 @@ li {
 
     .title{
         font-family: 'Paytone One', sans-serif;
-        font-size: 40px;
+        font-size: 30px;
         color: #e8f5e9;
         letter-spacing: 2px;
     }
-        
-}
+
 
 /* These rules take into effect when the browser's width is 600 px or less.*/
 
@@ -160,11 +170,28 @@ li {
         letter-spacing: 2px;
     }
 
+    #dropdownDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3%;
+        color: white;
+    }
+
+  
     #dropdown-menu{
-        margin-top: 6%;
-        align-content: center;
-        text-align: center;
-        font-size: 9px;
+        background-color: #29654D;  
+        font-size: 8px;
+    }
+
+    .dropdown-content .selectedState { 
+        color: white;
+        background-color: #29654D;
+        height: 2px;
+        display: flex;
+        align-items: center;
+        font-size: 11px;
+        white-space: nowrap;
     }
 
     #dropdownDiv {
@@ -200,6 +227,14 @@ li {
         font-size: 6px;
     }
 
+
+    #dropdownDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        color: white;
+
     .dropdown-content .selectedState { 
         color: white;
         background-color: #29654D;
@@ -209,6 +244,4 @@ li {
         align-items: center;
         font-size: 11px;
         white-space: nowrap;
-    }
-
 }
