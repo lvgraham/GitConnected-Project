@@ -1,6 +1,8 @@
 // $("#dropdown1 li").on("click", function(e) {
     $(document).ready(function() {
     // e.preventDefault();
+
+    $("<div class = 'totalParks'></div>").appendTo(".container");
     
     const urlParams = new URLSearchParams(window.location.search);
     const state = urlParams.get('state');
@@ -27,13 +29,28 @@
             campImage.attr("src", response.data[i].images[0].url);            
             let campsiteName = response.data[i].name;
             console.log(campsiteName);
+            $(campsiteName).attr('href', 'campsite')
             $(campInfoElem.append(campImage));
             $(campInfoElem.append(campsiteName));
             $('#campsiteInfo').append(campInfoElem);
+
             }
-     
+            
+    let totalparks = document.querySelector(".container .totalParks");
+    totalparks.textContent = ("Total Nat. Park Campgrounds in State: " + response.total);
+
+    // $(campsiteName).attr('href', "campsitepg3.html");
+
+    // $(campsiteName) = ("<a href='campsitepg3.html'></a>")
+
+
+
+    // $(campsiteName).replaceWith('<a href="campsitepg3.html">campsiteName</a>');
+
+    // $(campsiteName).replaceWith(function() {
+    //     return $(campsiteName).attr("href","campsitepg3.html").append($(this).contents());
+    //   });
     });
-    
 });
 
 
