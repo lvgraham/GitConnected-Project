@@ -10,9 +10,8 @@ $(document).ready(function(){
 
 })
 
-$("#dropdown1 li").on("click", function(e) {
+$("#dropdown1 li").on("load", function(e) {
     
-    e.preventDefault();
     
     let state = $(this).find("a").attr("value");
     // console.log(state);
