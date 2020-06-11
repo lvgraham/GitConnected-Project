@@ -1,11 +1,4 @@
 
-
-#heading {
- 
-    color: white;
-
-}
-
 /*applies to all body*/
 body {
     background-color: white;
@@ -38,7 +31,7 @@ body {
     
 }
 
-/*applies to h4 'Top Campsites'*/
+/*applies to h4 'Top Campsites' & name of campsite on campsitepg2.html*/
 h4{
     font-family: 'Paytone One', sans-serif;
     color: #2A4136;
@@ -46,59 +39,7 @@ h4{
     font-size: 30px;
 }
 
- li {
-     display: inline;
-}
-
-#loadedContent {
-    border: 2px solid black;
-    padding: 50px;
-    margin: auto;
-}
-
-#logo {
-    padding: auto;
-    margin: 10px;
-}
-
-.menu {
-    display: block;
-    position: relative;
-    cursor: pointer;
-}
-
-.menu-title {
-    display: block;
-    width: $menu_WIDTH;
-    height: 40px;
-    padding: 12px 0 0;
-    background: #9dc852;
-    text-align: center;
-    color: #ffffff;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: 0.3s;
-    background-color;
-}
-
-.menu-title:before {
-    content: "";
-    display: block;
-    height: 0;
-    border-top: 5px solid #9dc852;
-    border-left: ($menu_WIDTH / 2) solid 
-}
-
-.menu-title:hover {
-     background: #8db842; 
-}
-
-.menu-title:hover:before { 
-    border-top-color: #8db842; 
-}
-
-
-/*styling for div that camp information will show in*/
+/*styling for div that camp info will show in on main page*/
 .card-panel{
     display: flex;
     justify-content: space-around;
@@ -117,30 +58,49 @@ h4{
     margin-left: 2%;
 }
 
+/*div that park info will display in campsitepg2.html*/
+
+#loadedContent {
+    border: 2px solid black;
+    padding: 50px;
+    margin: auto;
+}
 
 /* State Dropdown Bar*/
+
+li {
+    display: inline;
+}
 
 #dropdownDiv {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 4.5%;
+    color: white;
 }
 
 #dropdown-menu{
-    background-color: #29654D;  
+    background-color: #29654D;
     
+    
+}
+
+#dropdown-menu:hover{
+    background-color: #3E9F78;  
 }
 
 .dropdown-content .selectedState { 
     color: white;
     background-color: #29654D;
+    opacity: 75%;
 }
 
 .dropdown-content .selectedState:hover {
     color: black;
     background-color: #f4d18f;
 }
+
 
 
 /*hide class*/
@@ -162,32 +122,6 @@ h4{
     text-align: center;
 }
 
-//* State Dropdown Bar*//
-
-/* #dropdownDiv{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-} */
-
-#dropdownDiv {
-    color: white;
-    background-color: black;
-}
-.selectedState { 
-    color: white;
-    background-color: #29654D
-   
-}
-.dropdown-content .selectedState:hover {
-    color: black;
-    background-color: #f4d18f;
-}
-/* .dropdown-content {
-
-} */
-
 /* MEDIA QUERIES */
 
 /*
@@ -204,6 +138,13 @@ h4{
         display: inline-block;
         width: 100%;
         padding: 2%;
+    }
+
+    .title{
+        font-family: 'Paytone One', sans-serif;
+        font-size: 40px;
+        color: #e8f5e9;
+        letter-spacing: 2px;
     }
         
 }
@@ -226,6 +167,20 @@ h4{
         font-size: 9px;
     }
 
+    #dropdownDiv {
+        color: white;
+        margin: 0;
+    }
+
+    .dropdown-content .selectedState { 
+        color: white;
+        background-color: #29654D;
+        opacity: 75%;
+        height: 2%;
+        display: flex;
+        align-items: center;
+        font-size: 11px;
+    }
 }
 
 /* These rules take into effect when the browser's width is 320 px or less.*/
@@ -243,6 +198,17 @@ h4{
         align-content: center;
         text-align: center;
         font-size: 6px;
+    }
+
+    .dropdown-content .selectedState { 
+        color: white;
+        background-color: #29654D;
+        opacity: 75%;
+        height: 2%;
+        display: flex;
+        align-items: center;
+        font-size: 11px;
+        white-space: nowrap;
     }
 
 }
