@@ -31,7 +31,7 @@ body {
     
 }
 
-/*applies to h4 'Top Campsites'*/
+/*applies to h4 'Top Campsites' & name of campsite on campsitepg2.html*/
 h4{
     font-family: 'Paytone One', sans-serif;
     color: #2A4136;
@@ -39,7 +39,7 @@ h4{
     font-size: 30px;
 }
 
-/*styling for div that camp information will show in*/
+/*styling for div that camp info will show in on main page*/
 .card-panel{
     display: flex;
     justify-content: space-around;
@@ -63,7 +63,7 @@ img{
     margin-left: 2%;
 }
 
-/*div that park info will show in in campsitepg2.html*/
+/*div that park info will display in campsitepg2.html*/
 
 #loadedContent {
     border: 2px solid black;
@@ -86,7 +86,9 @@ li {
 }
 
 #dropdown-menu{
-    background-color: #29654D;  
+    background-color: #29654D;
+    
+    
 }
 
 #dropdown-menu:hover{
@@ -102,11 +104,15 @@ li {
 .dropdown-content .selectedState { 
     color: white;
     background-color: #29654D;
+    opacity: 75%;
 }
+
 .dropdown-content .selectedState:hover {
     color: black;
     background-color: #f4d18f;
 }
+
+
 
 /*hide class*/
 .hide {
@@ -126,7 +132,6 @@ li {
     color: white;
     text-align: center;
 }
-
 
 /* MEDIA QUERIES */
 
@@ -153,7 +158,6 @@ li {
         letter-spacing: 2px;
     }
 
-}
 
 /* These rules take into effect when the browser's width is 600 px or less.*/
 
@@ -190,6 +194,20 @@ li {
         white-space: nowrap;
     }
 
+    #dropdownDiv {
+        color: white;
+        margin: 0;
+    }
+
+    .dropdown-content .selectedState { 
+        color: white;
+        background-color: #29654D;
+        opacity: 75%;
+        height: 2%;
+        display: flex;
+        align-items: center;
+        font-size: 11px;
+    }
 }
 
 /* These rules take into effect when the browser's width is 320 px or less.*/
@@ -209,12 +227,21 @@ li {
         font-size: 6px;
     }
 
+
     #dropdownDiv {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 0;
         color: white;
-    }
 
+    .dropdown-content .selectedState { 
+        color: white;
+        background-color: #29654D;
+        opacity: 75%;
+        height: 2%;
+        display: flex;
+        align-items: center;
+        font-size: 11px;
+        white-space: nowrap;
 }
