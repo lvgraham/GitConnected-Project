@@ -1,62 +1,47 @@
 // $("#dropdown1 li").on("click", function(e) {
-    $(document).ready(function() {
-    // e.preventDefault();
+$(document).ready(function () {
+  // e.preventDefault();
 
-    $("<div class = 'totalParks'></div>").appendTo(".container");
-    
-    const urlParams = new URLSearchParams(window.location.search);
-    const state = urlParams.get('state');
+  $("<div class = 'totalParks '>Total National Parks in State: </div>").appendTo(".container");
 
-    // let state = 'TX';//$(this).find("a").attr("value"); getParams('state');
-    // console.log(state);
+  const urlParams = new URLSearchParams(window.location.search);
+  const state = urlParams.get("state");
 
-    const APIKey = "ASQluJvriYYOmYed5QzQRORAQ2y3nC9julgxAIhA"
+  // let state = 'TX';//$(this).find("a").attr("value"); getParams('state');
+  // console.log(state);
 
-    const queryURL = "https://developer.nps.gov/api/v1/campgrounds?stateCode=" + state + "&api_key=" + APIKey
+  const APIKey = "ASQluJvriYYOmYed5QzQRORAQ2y3nC9julgxAIhA";
 
-    $.ajax({
-        type: 'GET',
-        url: queryURL,
-        dataType: 'json',
+  const queryURL =
+    "https://developer.nps.gov/api/v1/campgrounds?stateCode=" +
+    state +
+    "&api_key=" +
+    APIKey;
 
-    }).then (function(response) {
-        // console.log(response)
-        for (let i = 0; i < response.data.length ; i++){
-            console.log(response.data.length);
-            console.log(i);
-            let campInfoElem = $("<div>");
-            let campImage = $("<img>");
-            campImage.attr("src", response.data[i].images[0].url);            
-            let campsiteName = response.data[i].name;
-            console.log(campsiteName);
-            $(campsiteName).attr('href', 'campsite')
-            $(campInfoElem.append(campImage));
-            $(campInfoElem.append(campsiteName));
-            $('#campsiteInfo').append(campInfoElem);
-
-            }
-            
+  $.ajax({
+    type: "GET",
+    url: queryURL,
+    dataType: "json",
+  }).then(function (response) {
+    // console.log(response)
+    for (let i = 0; i < response.data.length; i++) {
+      console.log(response.data.length);
+      console.log(i);
+      let campInfoElem = $("<div>");
+      let campImage = $("<img>");
+      campImage.attr("src", response.data[i].images[0].url);
+      let campsiteName = response.data[i].name;
+      let id = response.data[i].id
+      console.log(campsiteName);
+      console.log(id)
+      $(campInfoElem.append(campImage));
+      $(campInfoElem.append(campsiteName));
+      $("#campsiteInfo").append(campInfoElem);
+      $(campImage).wrap($("<a>").attr("href", "campsitepg3.html"));
+      $(id).append(campImage)
+    //   $("a").attr("href", "campsitepg3.html").append(campsiteName)
+    }
     let totalparks = document.querySelector(".container .totalParks");
-    totalparks.textContent = ("Total Nat. Park Campgrounds in State: " + response.total);
-
-    // $(campsiteName).attr('href', "campsitepg3.html");
-
-    // $(campsiteName) = ("<a href='campsitepg3.html'></a>")
-
-
-
-    // $(campsiteName).replaceWith('<a href="campsitepg3.html">campsiteName</a>');
-
-    // $(campsiteName).replaceWith(function() {
-    //     return $(campsiteName).attr("href","campsitepg3.html").append($(this).contents());
-    //   });
-    });
+    totalparks.textContent = "Total Nat. Park Campgrounds in State: " + response.total;
+  });
 });
-
-
-
-
-
-
-
-

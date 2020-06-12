@@ -71,6 +71,11 @@ img{
     margin: auto;
 }
 
+.totalParks {
+    padding-bottom: 20px;
+    font-size: large;
+}
+
 /* State Dropdown Bar*/
 
 li {
