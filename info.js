@@ -71,3 +71,9 @@ $(document).ready(function () {
     // console.log("Postal Code: ", response.data[0].addresses[0].postalCode)
   });
 });
+
+
+// response.data[i].id
+
+// https://developer.nps.gov/api/v1/campgrounds?id= + id + &api_key=ASQluJvriYYOmYed5QzQRORAQ2y3nC9julgxAIhA
+    //search by id

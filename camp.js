@@ -31,11 +31,14 @@ $(document).ready(function () {
       let campImage = $("<img>");
       campImage.attr("src", response.data[i].images[0].url);
       let campsiteName = response.data[i].name;
+      let id = response.data[i].id
       console.log(campsiteName);
+      console.log(id)
       $(campInfoElem.append(campImage));
       $(campInfoElem.append(campsiteName));
       $("#campsiteInfo").append(campInfoElem);
       $(campImage).wrap($("<a>").attr("href", "campsitepg3.html"));
+      $(id).append(campImage)
     //   $("a").attr("href", "campsitepg3.html").append(campsiteName)
     }
     let totalparks = document.querySelector(".container .totalParks");
