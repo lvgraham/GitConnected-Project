@@ -8,9 +8,9 @@ $(document).ready(function(){
     $("<div class = 'parkName '>Park Name: </div>").appendTo(".campAdd"); 
     $("<div class = 'stateCode '>State Code: </div>").appendTo(".campAdd"); 
 
-})
+// })
 
-$("#dropdown1 li").on("click", function(e) {
+// $("#dropdown1 li").on("click", function(e) {
     
     e.preventDefault();
     

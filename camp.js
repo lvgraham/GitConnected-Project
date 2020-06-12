@@ -2,6 +2,8 @@
 // $("#dropdown1 li").on("click", function(e) {
     $(document).ready(function() {
         // e.preventDefault();
+
+        $("<div class = 'totalParks '>Total National Parks in State: </div>").appendTo(".container");
         
         const urlParams = new URLSearchParams(window.location.search);
         const state = urlParams.get('state');
@@ -32,6 +34,9 @@
                 $(campInfoElem.append(campsiteName));
                 $('#campsiteInfo').append(campInfoElem);
                 }
+        let totalparks = document.querySelector(".container .totalParks");
+        totalparks.textContent = ("Total Nat. Park Campgrounds in State: " + response.total);
+            
                 
                 campsiteName.find("a").attr("href", "campsitepg3.html")
 
