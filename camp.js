@@ -91,11 +91,13 @@ $(document).ready(function () {
             campInfoElem.append(reservations)
             $('#campsiteInfo').append(campInfoElem);
       $(campImage).wrap($("<a>").attr("href", "campsitepg3.html"));
-      $(id).append(campImage)
-    //   $("a").attr("href", "campsitepg3.html").append(campsiteName)
+      
+      //   $("a").attr("href", "campsitepg3.html").append(campsiteName)
     });
 
     let totalparks = document.querySelector(".container .totalParks");
     totalparks.textContent = "Total National Park Campgrounds in " + state + ": " + response.total;
   });
 });
+
+//   $(campImage).wrap($("<a>").attr("href", "https://developer.nps.gov/api/v1/campgrounds?id=" + id + "&api_key=" + APIKey));
