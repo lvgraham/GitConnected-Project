@@ -69,6 +69,7 @@ $(document).ready(function () {
          })
             console.log(site.imageUrl);
             let campInfoElem = $("<div>", {id: id});
+            $(campInfoElem).addClass("card");
             let campImage = $("<img>");
             if (site.imageUrl == "undefined"){
                 campImage.attr("src", images/imgicon.png)

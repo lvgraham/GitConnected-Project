@@ -50,7 +50,7 @@ h4{
 img{
     display: flex;
     justify-content: left;
-    max-width: 75%;
+    max-width: 50%;
     height: auto;
 }
 
@@ -67,6 +67,11 @@ img{
     border: 2px solid black;
     padding: 50px;
     margin: auto;
+}
+
+.card{
+    padding: 20px 50px 30px;
+
 }
 
 /*national park total header*/
