@@ -8,8 +8,8 @@ The user is then able to select a state from the dropdown list to view campsites
 * Park Name
 * Number of total sites
 * Number of reservable sites
-* The URL to make a reservation
 * The cost per night
+* Information about how to book
 
 When you select the name of the campsite, you will be shown the 5-day weather forecast for that area and more information about the campsite.
 
@@ -31,4 +31,19 @@ WHEN I select a state from the dropdown
 THEN I am presented with the national park campsites in that state
 WHEN I click on the campsite
 THEN I can view a description, nightly rates, and weather for the area
+```
 
+![Alt Text](https://media.giphy.com/media/Q5KeJcmJktgdZH7pvp/giphy.gif)
+
+## Future development:
+
+* Show parks as a more concise list when selecting the state
+* Ability to click on the park you'd like to visit to view the additional information   
+    * Number of total sites
+    * Number of reservable sites
+    * The URL to make a reservation
+    * The cost per night
+* Option to email user the park information
+* Ability to favorite parks 
+* Expand search to parks outside of the National Park Service
+* Ability to access reservation site directly from the more information page
