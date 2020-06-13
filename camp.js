@@ -44,15 +44,21 @@ $(document).ready(function () {
            url: W_queryURL,
            dataType: 'json',
        }).then (function(weather_response) {
-           console.log(weather_response);
-           
-           let weatherInfoElem = $("<div>");
-           let weatherTemp = weather_response.main.temp;
-           console.log(weatherTemp);
-           let F = (weatherTemp - 273.15) * 1.80 + 32
-                F = F.toFixed(0)
-                $(weatherInfoElem).append("Temperature: " + F + "°");
-           $('#'+id).append(weatherInfoElem);
+        console.log(weather_response);
+        let W_icon = `http://openweathermap.org/img/wn/${weather_response.weather[0].icon}@2x.png`;
+        
+        let weatherInfoElem = $("<div>");
+        let weatherIcon = $("<img>");
+        weatherIcon.attr("src", W_icon);
+        weatherIcon.attr("class", "icon");
+        let weatherTemp = weather_response.main.temp;
+        console.log(weatherTemp);
+        let F = (weatherTemp - 273.15) * 1.80 + 32
+        F = F.toFixed(0)
+        weatherInfoElem.append(weatherIcon);
+        $(weatherInfoElem).append("Temperature: " + F + "°");
+        
+        $('#'+id).append(weatherInfoElem);
            
     })
        
