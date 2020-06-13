@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("<div class = 'totalParks '>Total National Parks in State: </div>").appendTo(".campAdd"); 
+    // $("<div class = 'totalParks '>Total National Parks in State: </div>").appendTo(".campAdd"); 
     $("<div class = 'totalSites '>Number of Total Sites: </div>").appendTo(".campAdd"); 
     // $("<div class = 'tentSites '>Number of Tent Sites: </div>").appendTo(".container"); 
     // $("<div class = 'rvSites '>Number of RV Sites: </div>").appendTo(".container"); 
@@ -29,8 +29,8 @@ $(document).ready(function(){
     }).then (function(response) {
         // console.log(response)
 
-    let totalparks = document.querySelector(".campAdd .totalParks");
-    totalparks.textContent = ("Total National Parks in State: " + response.total);
+    // let totalparks = document.querySelector(".campAdd .totalParks");
+    // totalparks.textContent = ("Total National Parks in State: " + response.total);
 
     let stateCode = document.querySelector(".campAdd .stateCode");
     stateCode.textContent = ("State Code: " + response.data[0].addresses[0].stateCode)

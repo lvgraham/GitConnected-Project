@@ -7,6 +7,8 @@ $(document).ready(function () {
   // $("<div class = 'stateCode '>State Code: </div>").appendTo(".container");
   $("<div class = 'description '>Description: </div>").appendTo(".container");
   // $("<div class = 'totalParks '>Total Nat. Park Campgrounds: </div>").appendTo(".container");
+  $("<div class = 'parkImg '></div>").appendTo(".container");
+
 });
 
 // $("#dropdown1 li").on("click", function(e) {
@@ -28,7 +30,7 @@ $(document).ready(function () {
     APIKey;
 
   $.ajax({
-    type: "GET",
+    type: "GET",S
     url: queryURL,
     dataType: "json",
   }).then(function (response) {
@@ -64,6 +66,9 @@ $(document).ready(function () {
 
     let parks = document.querySelector(".container .park");
     parks.textContent = "Parks: " + response.data[0].description;
+
+    let img = document.querySelector(".container .parkImg")
+    img.innerHTML = response.data[0].images[0].url
 
     // console.log("Latitude: ", response.data[0].latitude)
     // console.log("Longitude: ", response.data[0].longitude)
