@@ -4,7 +4,7 @@
 $(document).ready(function () {
   // e.preventDefault();
 
-  $("<div class = 'totalParks'></div>").appendTo(".container");
+  $("<div class = 'totalParks'></div>").appendTo("#campsiteInfo");
 
   const urlParams = new URLSearchParams(window.location.search);
   const state = urlParams.get("state");
