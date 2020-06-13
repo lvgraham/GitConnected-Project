@@ -49,7 +49,9 @@ $(document).ready(function () {
            let weatherInfoElem = $("<div>");
            let weatherTemp = weather_response.main.temp;
            console.log(weatherTemp);
-           $(weatherInfoElem).append(weatherTemp);
+           let F = (weatherTemp - 273.15) * 1.80 + 32
+                F = F.toFixed(0)
+                $(weatherInfoElem).append("Temperature: " + F + "°");
            $('#'+id).append(weatherInfoElem);
            
     })
