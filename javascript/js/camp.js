@@ -26,21 +26,23 @@ $(document).ready(function () {
     url: queryURL,
     dataType: "json",
   }).then(function (response) {
-    console.log(response)
         const arrayResponse = [];
 
          for (let i = 0; i < response.data.length ; i++){
-             arrayResponse.push({
-                 longitude: response.data[i].longitude,
-                 latitude: response.data[i].latitude,
-                 imageUrl: response.data[i].images[0].url,
-                 campsiteName: response.data[i].name,
-                 description: response.data[i].description,
-                 campsites: response.data[i].campsites.totalSites,
-                 fees: response.data[i].fees[0].cost,
-                 reservation: response.data[i].reservationInfo
-             })
+           const tempObj = {
+            longitude: response.data[i].longitude,
+            latitude: response.data[i].latitude,
+            imageUrl: response.data[i].images && response.data[i].images[0].url ? response.data[i].images[0].url : 'images/imgicon.png' ,
+            campsiteName: response.data[i].name,
+            description: response.data[i].description,
+            campsites: response.data[i].campsites.totalSites,
+            fees: response.data[i].fees && response.data[i].fees[0].cost ? response.data[i].fees[0].cost : 0,
+            reservation: response.data[i].reservationInfo
+          };
+
+             arrayResponse.push(tempObj)
          }
+         console.log(arrayResponse)
         
         arrayResponse.forEach(function(site, index){
            let id = "W_camp"+ index;
