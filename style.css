@@ -71,6 +71,11 @@ img{
     margin: auto;
 }
 
+.totalParks {
+    padding-bottom: 20px;
+    font-size: large;
+}
+
 /* State Dropdown Bar*/
 
 li {
@@ -234,6 +239,7 @@ li {
         align-items: center;
         margin-top: 0;
         color: white;
+    }
 
     .dropdown-content .selectedState { 
         color: white;
@@ -244,4 +250,6 @@ li {
         align-items: center;
         font-size: 11px;
         white-space: nowrap;
+}
+}
 }

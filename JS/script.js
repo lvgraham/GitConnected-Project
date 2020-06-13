@@ -8,9 +8,11 @@ $(document).ready(function(){
     $("<div class = 'parkName '>Park Name: </div>").appendTo(".campAdd"); 
     $("<div class = 'stateCode '>State Code: </div>").appendTo(".campAdd"); 
 
-})
+// })
 
 $("#dropdown1 li").on("load", function(e) {
+
+// $("#dropdown1 li").on("click", function(e) {  // make on page load grab state from array of states to populate random data
     
     
     let state = $(this).find("a").attr("value");
@@ -65,3 +67,4 @@ $("#dropdown1 li").on("load", function(e) {
 
 });
 
+// ----- Make Array of States for query url to grab at random
