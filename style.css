@@ -2,7 +2,8 @@
 /*applies to all body*/
 body {
     background-color: white;
-    font-family: arial, sans-serif;
+    font-family: 'Raleway', arial, sans-serif;
+    letter-spacing: .5px;
     padding-bottom: 18%;
 }
 
@@ -31,10 +32,10 @@ body {
     
 }
 
-/*applies to h4 'Top Campsites' & name of campsite on campsitepg2.html*/
+/*applies to h4 'Campsites to Visit*/
 h4{
     font-family: 'Paytone One', sans-serif;
-    color: #2A4136;
+    color: #29654d;
     margin-bottom: 30px;
     font-size: 30px;
 }
@@ -123,7 +124,7 @@ li {
 .totalParks{
     font-size: 30px;
     font-family: 'Paytone One', sans-serif;
-    color: #29654d;;
+    color: #29654d;
 }
 
 /* campsite name */
