@@ -93,6 +93,7 @@ $(document).ready(function () {
       $(id).append(campImage)
     //   $("a").attr("href", "campsitepg3.html").append(campsiteName)
     });
+
     let totalparks = document.querySelector(".container .totalParks");
     totalparks.textContent = "Total National Park Campgrounds in " + state + ": " + response.total;
   });
