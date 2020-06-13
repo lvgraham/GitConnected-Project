@@ -118,12 +118,19 @@ li {
 }
 
 /*applies to campsitepg2.html*/
+
+/*national park total header*/
 .totalParks{
-    font-size: 25px;
+    font-size: 30px;
+    font-family: 'Paytone One', sans-serif;
+    color: #29654d;;
+}
+
+/* campsite name */
+h3{
     font-family: 'Paytone One', sans-serif;
     color: #d5ac5a;
 }
-
 
 
 /*hide class*/
