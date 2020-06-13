@@ -77,6 +77,7 @@ $(document).ready(function () {
             let fees = site.fees
             let dollarFees = parseFloat(fees).toFixed( 2 );
             let finalFees = $("<p>"+"Extimated Campsite Fee: $"+dollarFees+"</p>");
+
             let reservations = $("<p>"+site.reservation+"</p>");
             console.log(site.campsiteName);
             campInfoElem.append(campImage);
