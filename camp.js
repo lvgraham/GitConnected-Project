@@ -74,14 +74,16 @@ $(document).ready(function () {
             let campsiteName = $("<h3>"+site.campsiteName+"</h3>");
             let campDesc = $("<p>"+site.description+"</p>");
             let campsiteTotals = $("<p>"+"Total number of campsites: "+site.campsites+"</p>");
-            let fees = $("<p>"+"Extimated Campsite Fee: $"+site.fees+"</p>");
+            let fees = site.fees
+            let dollarFees = parseFloat(fees).toFixed( 2 );
+            let finalFees = $("<p>"+"Extimated Campsite Fee: $"+dollarFees+"</p>");
             let reservations = $("<p>"+site.reservation+"</p>");
             console.log(site.campsiteName);
             campInfoElem.append(campImage);
             campInfoElem.append(campsiteName);
             campInfoElem.append(campDesc);
             campInfoElem.append(campsiteTotals);
-            campInfoElem.append(fees);
+            campInfoElem.append(finalFees);
             campInfoElem.append(reservations)
             $('#campsiteInfo').append(campInfoElem);
       $(campImage).wrap($("<a>").attr("href", "campsitepg3.html"));
