@@ -64,6 +64,7 @@ $(document).ready(function(){
   
     })
 
+    
 });
 
 // ----- Make Array of States for query url to grab at random
