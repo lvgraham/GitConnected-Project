@@ -61,8 +61,8 @@ $(document).ready(function () {
                 console.log(weatherTemp);
                 let F = (weatherTemp - 273.15) * 1.80 + 32
                 F = F.toFixed(0)
-                weatherInfoElem.append(weatherIcon);
                 $(weatherInfoElem).append("Temperature: " + F + "°");
+                weatherInfoElem.append(weatherIcon);
                 
                 $('#'+id).append(weatherInfoElem);
                 
