@@ -66,7 +66,7 @@ window.onload = (event) => {
 
         // let img = response.data[0].images[0].url
         // document.getElementById("parkImg").src = img;
-        document.getElementById("parkImg").src = response.data[0].images[0].url
+        document.getElementById("parkImg").src = response.data[i].images[0].url
 
   
 
