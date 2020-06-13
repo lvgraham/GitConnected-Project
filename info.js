@@ -30,7 +30,7 @@ $(document).ready(function () {
     APIKey;
 
   $.ajax({
-    type: "GET",S
+    type: "GET",
     url: queryURL,
     dataType: "json",
   }).then(function (response) {

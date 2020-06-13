@@ -2,7 +2,7 @@
 $(document).ready(function () {
   // e.preventDefault();
 
-  $("<div class = 'totalParks '>Total National Parks in State: </div>").appendTo(".container");
+  $("<div class = 'totalParks '></div>").appendTo(".container");
 
   const urlParams = new URLSearchParams(window.location.search);
   const state = urlParams.get("state");
@@ -69,9 +69,11 @@ $(document).ready(function () {
       $(campImage).wrap($("<a>").attr("href", "campsitepg3.html"));
     //   $(campImage).wrap($("<a>").attr("href", "https://developer.nps.gov/api/v1/campgrounds?id=" + id + "&api_key=" + APIKey));
       $(id).append(campImage)
-    //   $("a").attr("href", "campsitepg3.html").append(campsiteName)
     });
     let totalparks = document.querySelector(".container .totalParks");
     totalparks.textContent = "Total Nat. Park Campgrounds in State: " + response.total;
   });
 });
+
+
+// let id = response.data[i].id

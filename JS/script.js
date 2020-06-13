@@ -8,7 +8,7 @@ $(document).ready(function(){
     $("<div class = 'parkName '>Park Name: </div>").appendTo(".campAdd"); 
     $("<div class = 'stateCode '>State Code: </div>").appendTo(".campAdd"); 
 
-// })
+})
 
 $("#dropdown1 li").on("load", function(e) {
 
@@ -67,4 +67,4 @@ $("#dropdown1 li").on("load", function(e) {
 
 });
 
-// ----- Make Array of States for query url to grab at random
+// Make Array of States for query url to grab at random
