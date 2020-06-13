@@ -32,7 +32,8 @@ $(document).ready(function () {
             latitude: response.data[i].latitude,
             imageUrl: response.data[i].images[0].url,
             campsiteName: response.data[i].name,
-            description: response.data[i].description
+            description: response.data[i].description,
+            p_id: response.data[i].id
         })
     }
    
@@ -61,6 +62,8 @@ $(document).ready(function () {
        campImage.attr("src", site.imageUrl);            
        let campsiteName = $("<h3>"+site.campsiteName+"</h3>");
        let campDesc = $("<p>"+site.description+"</p>");
+       p_id = site.p_id
+       console.log(p_id)
        console.log(site.campsiteName);
        campInfoElem.append(campImage);
        campInfoElem.append(campsiteName);
@@ -68,7 +71,7 @@ $(document).ready(function () {
        $('#campsiteInfo').append(campInfoElem);
       $(campImage).wrap($("<a>").attr("href", "campsitepg3.html"));
     //   $(campImage).wrap($("<a>").attr("href", "https://developer.nps.gov/api/v1/campgrounds?id=" + id + "&api_key=" + APIKey));
-      $(id).append(campImage)
+      $(p_id).append(campImage)
     });
     let totalparks = document.querySelector(".container .totalParks");
     totalparks.textContent = "Total Nat. Park Campgrounds in State: " + response.total;
