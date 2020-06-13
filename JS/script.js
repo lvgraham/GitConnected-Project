@@ -10,9 +10,10 @@ $(document).ready(function(){
 
 // })
 
+$("#dropdown1 li").on("load", function(e) {
+
 // $("#dropdown1 li").on("click", function(e) {  // make on page load grab state from array of states to populate random data
     
-    e.preventDefault();
     
     let state = $(this).find("a").attr("value");
     // console.log(state);
