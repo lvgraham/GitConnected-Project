@@ -114,7 +114,14 @@ li {
 
 .dropdown-content .selectedState:hover {
     color: black;
-    background-color: #f4d18f;
+    background-color: #e6bb6c;
+}
+
+/*applies to campsitepg2.html*/
+.totalParks{
+    font-size: 25px;
+    font-family: 'Paytone One', sans-serif;
+    color: #d5ac5a;
 }
 
 

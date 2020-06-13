@@ -1,8 +1,10 @@
 // $("#dropdown1 li").on("click", function(e) {
+
+//creating function to run when page loads
 $(document).ready(function () {
   // e.preventDefault();
 
-  $("<div class = 'totalParks '>Total National Parks in State: </div>").appendTo(".container");
+  $("<div class = 'totalParks'></div>").appendTo(".container");
 
   const urlParams = new URLSearchParams(window.location.search);
   const state = urlParams.get("state");
@@ -25,7 +27,8 @@ $(document).ready(function () {
     dataType: "json",
   }).then(function (response) {
     console.log(response)
-         const arrayResponse = [];
+        const arrayResponse = [];
+
          for (let i = 0; i < response.data.length ; i++){
              arrayResponse.push({
                  longitude: response.data[i].longitude,
@@ -92,6 +95,6 @@ $(document).ready(function () {
     //   $("a").attr("href", "campsitepg3.html").append(campsiteName)
     });
     let totalparks = document.querySelector(".container .totalParks");
-    totalparks.textContent = "Total Nat. Park Campgrounds in State: " + response.total;
+    totalparks.textContent = "Total National Park Campgrounds in " + state + ": " + response.total;
   });
 });
