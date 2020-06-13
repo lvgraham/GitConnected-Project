@@ -13,7 +13,7 @@ body {
     background-size: 100%;
     padding: 2%;
     padding-left: 5%;
-    background-image: url('images/banner.jpg');
+    background-image: url('../images/banner.jpg');
     background-repeat: no-repeat;
 }
 
