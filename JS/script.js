@@ -1,20 +1,31 @@
-$(document).ready(function(){
-    $("<div class = 'totalParks '>Total National Parks in State: </div>").appendTo(".campAdd"); 
-    $("<div class = 'totalSites '>Number of Total Sites: </div>").appendTo(".campAdd"); 
-    // $("<div class = 'tentSites '>Number of Tent Sites: </div>").appendTo(".container"); 
-    // $("<div class = 'rvSites '>Number of RV Sites: </div>").appendTo(".container"); 
-    $("<div class = 'reserveURL '>Reservation URL: </div>").appendTo(".campAdd"); 
-    $("<div class = 'cost '>Cost: </div>").appendTo(".campAdd"); 
-    $("<div class = 'parkName '>Park Name: </div>").appendTo(".campAdd"); 
-    $("<div class = 'stateCode '>State Code: </div>").appendTo(".campAdd"); 
 
-// })
+$(document).ready(function(){
+    $("<div class = 'parkName '></div>").appendTo(".campAdd");
+  $("<div class = 'totalSites '></div>").appendTo(".campAdd");
+//   $("<div class = 'reserveSites '>Number of Reservable Sites: </div>").appendTo(".campAdd");
+//   $("<div class = 'reserveURL '>Reservation URL: </div>").appendTo(".campAdd");
+  $("<div class = 'cost '></div>").appendTo(".campAdd");
+  $("<div class = 'stateCode '></div>").appendTo(".campAdd");
+  $("<div class = 'description '></div>").appendTo(".campAdd");
+  $("<img class = 'parkImg '>").appendTo(".campAdd");
+  $("<div class = 'infoURL '></div>").appendTo(".campAdd");
+
+  
+
+})
+ 
+
+window.onload = (event) => {
+// $("#dropdown1 li").on("load", function(e) {
+    let stateArr = [ 'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'DC', 'FL', 'HI', 'ID', 'IN', 'KS', 'KY', 'MD', 'MI', 'MN', 'MS', 'MO', 'MT', 'NV', 'NJ', 'NM', 'NY', 'NC', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VA', 'WA', 'WV', 'WI', 'WY' ]
+    let state = stateArr[Math.floor(Math.random()*stateArr.length)];
+    console.log(state)
+    // removed (NH, VI, IL, DE, MH, VT, ME, IA, CT, MA, NE, PR)
 
 // $("#dropdown1 li").on("click", function(e) {  // make on page load grab state from array of states to populate random data
     
-    e.preventDefault();
     
-    let state = $(this).find("a").attr("value");
+    // let state = $(this).find("a").attr("value");
     // console.log(state);
 
     const APIKey = "ASQluJvriYYOmYed5QzQRORAQ2y3nC9julgxAIhA"
@@ -27,44 +38,41 @@ $(document).ready(function(){
         dataType: 'json',
 
     }).then (function(response) {
-        // console.log(response)
+        console.log(response)
 
-    let totalparks = document.querySelector(".campAdd .totalParks");
-    totalparks.textContent = ("Total National Parks in State: " + response.total);
+    for (i = 0; i < state.length; i++) {
 
-    let stateCode = document.querySelector(".campAdd .stateCode");
-    stateCode.textContent = ("State Code: " + response.data[0].addresses[0].stateCode)
-    
-    let reserveSites = document.querySelector(".campAdd .reserveSites");
-    reserveSites.textContent = ("Number of Reservable Site: " + response.data[0].numberOfSitesReservable)
+
+        let stateCode = document.querySelector(".campAdd .stateCode");
+        stateCode.textContent = ("State Code: " + response.data[i].addresses[0].stateCode)
+        // console.log(stateCode)
   
-    let totalSites = document.querySelector(".campAdd .totalSites");
-    totalSites.textContent = ("Number of Total Sites: " + response.data[0].campsites.totalsites)
+        let totalSites = document.querySelector(".campAdd .totalSites");
+        totalSites.textContent = ("Number of Total Sites: " + response.data[i].campsites.totalSites)  
+
+        let cost = document.querySelector(".campAdd .cost");
+        cost.textContent = ("Cost: " + response.data[i].fees[0].cost) 
+
+        let description = document.querySelector(".campAdd .description");
+        description.textContent = ("Description: " + response.data[i].description) 
     
-    // let tentSites = document.querySelector(".container .tentSites");
-    // tentSites.textContent = ("Number of Tent Only: " + response.data[0].campsites.tentonly)
-    
-    // let rvSites = document.querySelector(".container .rvSites");
-    // rvSites.textContent = ("Number of RV Only: " + response.data[0].campsites.rvonly)
+        let parkName = document.querySelector(".campAdd .parkName");
+        parkName.textContent = ("Park Name: " + response.data[i].name) 
+        console.log(parkName)
+
+        let moreInfo = document.querySelector(".campAdd .infoURL");
+        moreInfo.textContent = "For More Information: "+ response.data[i].url;
+        console.log(moreInfo)
+
+        // let img = response.data[0].images[0].url
+        // document.getElementById("parkImg").src = img;
+        document.getElementById("parkImg").src = response.data[i].images[0].url
+
   
-    let reserveURL = document.querySelector(".campAdd .reserveURL");
-    reserveURL.textContent = ("Reservation URL: " + response.data[0].reservationUrl)  
 
-    let cost = document.querySelector(".campAdd .cost");
-    cost.textContent = ("Cost: " + response.data[0].fees[0].cost) 
-    
-    let parkName = document.querySelector(".campAdd .parkName");
-    parkName.textContent = ("Park Name: " + response.data[0].operatingHours[0].name) 
+    }
 
-
-    console.log("Latitude: ", response.data[0].latitude)
-    console.log("Longitude: ", response.data[0].longitude)
-    console.log("Park ID: ", response.data[0].id)
-    console.log("Postal Code: ", response.data[4].addresses[0].postalCode)
-  
     })
 
-    
-});
+}
 
-// ----- Make Array of States for query url to grab at random

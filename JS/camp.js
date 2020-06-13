@@ -12,8 +12,10 @@ $(document).ready(function () {
   // let state = 'TX';//$(this).find("a").attr("value"); getParams('state');
   // console.log(state);
 
+  //setting api key
   const APIKey = "ASQluJvriYYOmYed5QzQRORAQ2y3nC9julgxAIhA";
 
+  //setting URL to pull from API
   const queryURL =
     "https://developer.nps.gov/api/v1/campgrounds?stateCode=" +
     state +
@@ -91,13 +93,11 @@ $(document).ready(function () {
             campInfoElem.append(reservations)
             $('#campsiteInfo').append(campInfoElem);
       $(campImage).wrap($("<a>").attr("href", "campsitepg3.html"));
-      
-      //   $("a").attr("href", "campsitepg3.html").append(campsiteName)
+      $(id).append(campImage)
+    //   $("a").attr("href", "campsitepg3.html").append(campsiteName)
     });
 
     let totalparks = document.querySelector(".container .totalParks");
     totalparks.textContent = "Total National Park Campgrounds in " + state + ": " + response.total;
   });
 });
-
-//   $(campImage).wrap($("<a>").attr("href", "https://developer.nps.gov/api/v1/campgrounds?id=" + id + "&api_key=" + APIKey));
