@@ -1,8 +1,10 @@
 // $("#dropdown1 li").on("click", function(e) {
+
+//creating function to run when page loads
 $(document).ready(function () {
   // e.preventDefault();
 
-  $("<div class = 'totalParks '>Total National Parks in State: </div>").appendTo(".container");
+  $("<div class = 'totalParks'></div>").appendTo("#campsiteInfo");
 
   const urlParams = new URLSearchParams(window.location.search);
   const state = urlParams.get("state");
@@ -25,7 +27,8 @@ $(document).ready(function () {
     dataType: "json",
   }).then(function (response) {
     console.log(response)
-         const arrayResponse = [];
+        const arrayResponse = [];
+
          for (let i = 0; i < response.data.length ; i++){
              arrayResponse.push({
                  longitude: response.data[i].longitude,
@@ -58,14 +61,15 @@ $(document).ready(function () {
                 console.log(weatherTemp);
                 let F = (weatherTemp - 273.15) * 1.80 + 32
                 F = F.toFixed(0)
-                weatherInfoElem.append(weatherIcon);
                 $(weatherInfoElem).append("Temperature: " + F + "°");
+                weatherInfoElem.append(weatherIcon);
                 
                 $('#'+id).append(weatherInfoElem);
                 
          })
             console.log(site.imageUrl);
             let campInfoElem = $("<div>", {id: id});
+            $(campInfoElem).addClass("card");
             let campImage = $("<img>");
             if (site.imageUrl == "undefined"){
                 campImage.attr("src", images/imgicon.png)
@@ -77,11 +81,10 @@ $(document).ready(function () {
             let fees = site.fees
             let dollarFees = parseFloat(fees).toFixed( 2 );
             let finalFees = $("<p>"+"Extimated Campsite Fee: $"+dollarFees+"</p>");
-
             let reservations = $("<p>"+site.reservation+"</p>");
             console.log(site.campsiteName);
-            campInfoElem.append(campImage);
             campInfoElem.append(campsiteName);
+            campInfoElem.append(campImage);
             campInfoElem.append(campDesc);
             campInfoElem.append(campsiteTotals);
             campInfoElem.append(finalFees);
@@ -91,7 +94,8 @@ $(document).ready(function () {
       $(id).append(campImage)
     //   $("a").attr("href", "campsitepg3.html").append(campsiteName)
     });
+
     let totalparks = document.querySelector(".container .totalParks");
-    totalparks.textContent = "Total Nat. Park Campgrounds in State: " + response.total;
+    totalparks.textContent = "Total National Park Campgrounds in " + state + ": " + response.total;
   });
 });

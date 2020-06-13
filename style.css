@@ -2,7 +2,8 @@
 /*applies to all body*/
 body {
     background-color: white;
-    font-family: arial, sans-serif;
+    font-family: 'Raleway', arial, sans-serif;
+    letter-spacing: .5px;
     padding-bottom: 18%;
 }
 
@@ -31,10 +32,10 @@ body {
     
 }
 
-/*applies to h4 'Top Campsites' & name of campsite on campsitepg2.html*/
+/*applies to h4 'Campsites to Visit*/
 h4{
     font-family: 'Paytone One', sans-serif;
-    color: #2A4136;
+    color: #29654d;
     margin-bottom: 30px;
     font-size: 30px;
 }
@@ -46,12 +47,9 @@ h4{
     align-self: center;
 }
 
-.img{
-    display: inline-block;
-    width: 21%;
-}
-
 img{
+    display: flex;
+    justify-content: left;
     max-width: 50%;
     height: auto;
 }
@@ -71,9 +69,23 @@ img{
     margin: auto;
 }
 
+.card{
+    padding: 20px 50px 30px;
+
+}
+
+/*national park total header*/
 .totalParks {
     padding-bottom: 20px;
-    font-size: large;
+    font-size: 30px;
+    font-family: 'Paytone One', sans-serif;
+    color: #29654d;
+}
+
+/* campsite name */
+h3{
+    font-family: 'Paytone One', sans-serif;
+    color: #d5ac5a;
 }
 
 /* State Dropdown Bar*/
@@ -114,10 +126,8 @@ li {
 
 .dropdown-content .selectedState:hover {
     color: black;
-    background-color: #f4d18f;
+    background-color: #e6bb6c;
 }
-
-
 
 /*hide class*/
 .hide {
@@ -137,6 +147,10 @@ li {
     color: white;
     text-align: center;
 }
+
+
+
+
 
 /* MEDIA QUERIES */
 
